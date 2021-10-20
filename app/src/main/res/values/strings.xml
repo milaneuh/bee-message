@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">beemessage</string>
+    <string name="email">Email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="welcome_to_beemessage">Welcome to BeeMessage !</string>
+    <string name="todo">TODO</string>
+    <string name="password">Password</string>
+</resources>

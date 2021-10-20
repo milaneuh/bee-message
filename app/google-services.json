@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "505050935072",
+    "project_id": "beemessa",
+    "storage_bucket": "beemessa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505050935072:android:ca609491dcf32300aeb145",
+        "android_client_info": {
+          "package_name": "com.filrouge.beemessage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505050935072-hki5kmind5vrnols4ocii8s6s1sb5peq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc7HXqxugRnN-6SmHR6eaoMj5a1WECQWA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "505050935072-hki5kmind5vrnols4ocii8s6s1sb5peq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
