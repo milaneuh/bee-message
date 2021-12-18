@@ -13,6 +13,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import at.favre.lib.crypto.bcrypt.BCrypt
 import com.filrouge.beemessage.databinding.ActivitySignUpBinding
 import com.filrouge.beemessage.utilities.Constants
 import com.filrouge.beemessage.utilities.PreferenceManager
@@ -47,7 +48,7 @@ class SignUpActivity : AppCompatActivity() {
         //Clic -> Verification des inputs -> Enregistrement sur la bdd -> MainActivity
         binding.btSignup.setOnClickListener() {
             if (isValidSignUpDetails()) {
-                Log.w("TESTBT", "isValidSIgnUpDetails(True)")
+                Log.w("SIGNINGUP", "isValidSIgnUpDetails(True)")
                 signUp()
             }
         }
@@ -73,11 +74,17 @@ class SignUpActivity : AppCompatActivity() {
         //Initialisation de la bdd
         var databse = FirebaseFirestore.getInstance()
 
+        //On encrypte le mot de passe
+        Log.w("SIGNINGUP", "Hashing password...")
+        val passwordArray = binding.passwordRegister.text.toString().trim()
+        val hashedPassword =
+            BCrypt.withDefaults().hashToString(10, passwordArray.toCharArray())
+
         //On crée une hashMap avec nos data
         var user: HashMap<String, Any> = HashMap()
         user.put(Constants.KEY_NAME, binding.usernameRegister.text.toString())
         user.put(Constants.KEY_EMAIL, binding.emailRegister.text.toString())
-        user.put(Constants.KEY_PASSWORD, binding.passwordRegister.text.toString())
+        user.put(Constants.KEY_PASSWORD, hashedPassword)
         user.put(Constants.KEY_IMAGE, encodedImage!!)
 
         //On ajoute nos data dans la bdd
