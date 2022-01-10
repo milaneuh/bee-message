@@ -90,7 +90,7 @@ class SignInActivity : AppCompatActivity() {
                             documentSnapshot.getString(Constants.KEY_IMAGE)!!
                         )
 
-                        //On démare l'activity MainActivity
+                        //On démarre  l'activity MainActivity
                         val intent: Intent = Intent(applicationContext, MainActivity::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                         startActivity(intent)
