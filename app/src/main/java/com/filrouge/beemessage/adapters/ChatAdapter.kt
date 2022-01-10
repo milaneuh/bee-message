@@ -72,8 +72,8 @@ class ChatAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder> {
     companion object {
         /**Ceci sont des valeurs et des classe static, elles se chargeront lorsque l'application se lance**/
 
-        //Les view type nous permet de différencier si un message est reçu ou envoyer.
-        // Ce qui nous permettera de les afficher différement.
+        //Les view type nous permet de différencier si un message est reçu ou envoyé.
+        // Ce qui nous permettra de les afficher différemment.
         val VIEW_TYPE_SENT: Int = 1
         val VIEW_TYPE_RECEIVED: Int = 2
 
